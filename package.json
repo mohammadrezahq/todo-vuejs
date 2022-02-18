@@ -1,22 +1,45 @@
 {
-  "name": "electron-todo",
-  "version": "0.1.0",
+  "name": "todo",
+  "version": "0.7.2",
+  "description": "Todo app with vue js and electron js",
+  "author": {
+    "name": "Mohammadreza Haghshenas",
+    "email": "mohammadrezah.official@gmail.com",
+    "url": "https://mohammadrezahq.github.io"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
+  "main": "background.js",
   "dependencies": {
+    "@fullcalendar/core": "^5.10.1",
+    "@fullcalendar/daygrid": "^5.10.1",
+    "@fullcalendar/interaction": "^5.10.1",
+    "@fullcalendar/vue3": "^5.10.1",
+    "autoprefixer": "^9.8.8",
     "core-js": "^3.6.5",
+    "postcss": "^7.0.39",
     "register-service-worker": "^1.7.1",
-    "vue": "^3.0.0"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
+    "tippy.js": "^6.3.7",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-pwa": "~4.5.15",
     "@vue/cli-service": "~4.5.15",
     "@vue/compiler-sfc": "^3.0.0",
+    "electron": "^13.0.0",
+    "electron-devtools-installer": "^3.1.0",
     "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-electron-builder": "~2.1.1"
   }
 }
